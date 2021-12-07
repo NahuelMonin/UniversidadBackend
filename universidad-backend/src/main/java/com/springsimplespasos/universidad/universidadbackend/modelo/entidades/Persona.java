@@ -14,7 +14,7 @@ public abstract class Persona implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(nullable = false, length = 60)
-    private String Nombre;
+    private String nombre;
     @Column(nullable = false, length = 60)
     private String apellido;
     @Column(nullable = false, length = 10)
@@ -35,7 +35,7 @@ public abstract class Persona implements Serializable {
 
     public Persona(Integer id, String nombre, String apellido, String dni, Direccion direccion) {
         this.id = id;
-        Nombre = nombre;
+        this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.direccion = direccion;
@@ -50,11 +50,11 @@ public abstract class Persona implements Serializable {
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        this.nombre = nombre;
     }
 
     public String getApellido() {
@@ -111,7 +111,7 @@ public abstract class Persona implements Serializable {
     public String toString() {
         return "Persona{" +
                 "id=" + id +
-                ", Nombre='" + Nombre + '\'' +
+                ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", dni='" + dni + '\'' +
                 ", fechaAlta=" + fechaAlta +

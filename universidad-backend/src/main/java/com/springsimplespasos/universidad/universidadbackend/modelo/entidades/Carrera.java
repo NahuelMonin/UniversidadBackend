@@ -17,7 +17,7 @@ public class Carrera implements Serializable {
     @Column (name = "cantidad_materias")
     private Integer cantMaterias;
     @Column (name = "cantidad_anios")
-    private Integer cantAnios;
+    private Integer cantidadAnios;
     @Column (name = "fecha_alta")
     private LocalDateTime fechaAlta;
     @Column (name = "fecha_modificacion")
@@ -38,11 +38,11 @@ public class Carrera implements Serializable {
     public Carrera() {
     }
 
-    public Carrera(Integer id, String nombre, Integer cantMaterias, Integer cantAnios) {
+    public Carrera(Integer id, String nombre, Integer cantMaterias, Integer cantidadAnios) {
         this.id = id;
         this.nombre = nombre;
         this.cantMaterias = cantMaterias;
-        this.cantAnios = cantAnios;
+        this.cantidadAnios = cantidadAnios;
     }
 
     public Integer getId() {
@@ -69,12 +69,12 @@ public class Carrera implements Serializable {
         this.cantMaterias = cantMaterias;
     }
 
-    public Integer getCantAnios() {
-        return cantAnios;
+    public Integer getCantidadAnios() {
+        return cantidadAnios;
     }
 
-    public void setCantAnios(Integer cantAnios) {
-        this.cantAnios = cantAnios;
+    public void setCantidadAnios(Integer cantidadAnios) {
+        this.cantidadAnios = cantidadAnios;
     }
 
     public LocalDateTime getFechaAlta() {
@@ -125,7 +125,7 @@ public class Carrera implements Serializable {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", cantMaterias=" + cantMaterias +
-                ", cantAnios=" + cantAnios +
+                ", cantAnios=" + cantidadAnios +
                 ", fechaAlta=" + fechaAlta +
                 ", fechaModificacion=" + fechaModificacion +
                 '}';
